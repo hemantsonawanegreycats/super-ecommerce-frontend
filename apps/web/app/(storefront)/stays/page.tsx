@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { 
   Map as MapIcon, 
   List, 
@@ -23,6 +23,13 @@ import { MOCK_STAYS, Stay } from "@/features/booking/data/mock-stays";
 export default function StayListingPage() {
   const [view, setView] = useState<"list" | "map">("list");
   const [selectedStay, setSelectedStay] = useState<Stay | null>(null);
+
+  const markerPositions = useMemo(() => {
+    return MOCK_STAYS.map(() => ({
+      top: `${40 + (Math.random() * 20)}%`,
+      left: `${40 + (Math.random() * 20)}%`
+    }));
+  }, []);
 
   return (
     <div className="relative flex flex-col h-[calc(100vh-80px)] overflow-hidden bg-background">
@@ -93,14 +100,11 @@ export default function StayListingPage() {
           </div>
 
           {/* Markers (Mock) */}
-          {MOCK_STAYS.map(stay => (
+          {MOCK_STAYS.map((stay, idx) => (
             <div 
               key={`marker-${stay.id}`}
               className="absolute group cursor-pointer"
-              style={{ 
-                top: `${40 + (Math.random() * 20)}%`, 
-                left: `${40 + (Math.random() * 20)}%` 
-              }}
+              style={markerPositions[idx]}
             >
               <div className="bg-background px-3 py-1.5 rounded-full border-2 border-primary shadow-xl group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                  <span className="text-xs font-black italic">${stay.pricePerNight}</span>
