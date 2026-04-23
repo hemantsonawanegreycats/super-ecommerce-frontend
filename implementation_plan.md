@@ -4249,14 +4249,14 @@ e2e/
 
 ### Phase 5 Acceptance Criteria ✅
 
-- [ ] Vendor can create A/B experiment, track results, declare winner
-- [ ] Per-product funnel shows 5 stages with drop-off rates
+- [x] Vendor can create A/B experiment, track results, declare winner
+- [x] Per-product funnel shows 5 stages with drop-off rates
 - [ ] Add-to-cart animation: product image flies to cart icon
 - [ ] Order success page: checkmark draws, confetti fires
 - [ ] Heart fill animates on wishlist add
 - [ ] GDPR data export request emails download link within 24hrs
 - [ ] Account deletion flow blocks on active orders/bookings
-- [ ] Admin analytics dashboard renders with real data
+- [x] Admin analytics dashboard renders with real data
 - [ ] hCaptcha appears after 5 failed login attempts
 - [ ] All 5 Playwright E2E suites pass
 - [ ] Lighthouse Performance ≥ 90 on homepage and PDP
@@ -4339,21 +4339,21 @@ e2e/
 - [ ] Search analytics (zero-results, conversion, filter heatmap)
 
 ### Phase 5 (Weeks 19–22) — Growth, Polish & Compliance
-- [ ] Vendor A/B experiment wizard (5 steps)
-- [ ] Statistical significance meter
-- [ ] Per-product conversion funnel (5 stages)
+- [x] Vendor A/B experiment wizard (5 steps)
+- [x] Statistical significance meter
+- [x] Per-product conversion funnel (5 stages)
 - [ ] AI-generated funnel insights panel
-- [ ] Cart-to-icon FLIP animation
-- [ ] SVG pathLength checkmark animation
-- [ ] Confetti on order success
-- [ ] Heart fill animation on wishlist
-- [ ] GDPR data export (ZIP with all user data)
-- [ ] Account deletion flow with blockers check + 30-day grace
-- [ ] Admin + vendor analytics dashboards (Recharts)
-- [ ] 429 rate limit UI (countdown banner)
-- [ ] hCaptcha after 5 failed auth attempts
-- [ ] Exponential backoff in apiFetch
-- [ ] Playwright E2E: 5 critical path suites
+- [x] Cart-to-icon FLIP animation
+- [x] SVG pathLength checkmark animation
+- [x] Confetti on order success
+- [x] Heart fill animation on wishlist
+- [x] GDPR data export (ZIP with all user data)
+- [x] Account deletion flow with blockers check + 30-day grace
+- [x] Admin + vendor analytics dashboards (Recharts)
+- [x] 429 rate limit UI (countdown banner)
+- [x] hCaptcha after 5 failed auth attempts
+- [x] Exponential backoff in apiFetch
+- [x] Playwright E2E: 5 critical path suites
 - [ ] Lighthouse Performance ≥ 90
 - [ ] Bundle size < 200KB initial
 - [ ] Production deploy + Vercel KV + S3/R2 + Stripe webhooks
